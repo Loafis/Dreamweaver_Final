@@ -42,6 +42,33 @@
       <p>On Friday at 6:00 we will be hosting a support group for victims of duck misdeeds. Bring anyone that you think would be good at Risk because we need more people to play with after the discussion time.</p>
     </article>
     <aside class="right_article"><img src="images/events.jpg" alt="Evil Clipart duck 24 - 300 X 250" width="435" height="338"/></aside>
+	<script> var elForm, elSelectPackage, elPackageHint, elTerms, elTermsHint; // Declare variables
+elForm          = document.getElementById('formSignup');          // Store elements
+elSelectPackage = document.getElementById('package');
+elPackageHint   = document.getElementById('packageHint');
+elTerms         = document.getElementById('terms');
+elTermsHint     = document.getElementById('termsHint');
+
+function packageHint() {                                 // Declare function
+  var pack = this.options[this.selectedIndex].value;     // Get selected option
+  if (pack === 'monthly') {                              // If monthly package
+    elPackageHint.innerHTML = 'Save $10 if you pay for 1 year!';//Show this msg
+  } else {                                               // Otherwise
+    elPackageHint.innerHTML = 'Wise choice!';            // Show this message
+  }
+}
+
+function checkTerms(event) {                             // Declare function
+  if (!elTerms.checked) {                                // If checkbox ticked
+    elTermsHint.innerHTML = 'You must agree to the terms.'; // Show message
+    event.preventDefault();                              // Don't submit form
+  }
+}
+
+//Create event listeners: submit calls checkTerms(), change calls packageHint()
+elForm.addEventListener('submit', checkTerms, false);
+elSelectPackage.addEventListener('change', packageHint, false);
+</script>
   </section>
   <footer class="secondary_header footer">
     <div class="copyright">&copy;2020- <strong>PLEASE SAVE ME FROM MY SUFFERING LLC</strong><strong></strong></div>
