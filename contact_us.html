@@ -6,8 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Guild of the Quacked</title>
 <link href="css/multiColumnTemplate.css" rel="stylesheet" type="text/css">
-</head>
-<body>
+	</head>
+	
+	
+	
+	
+	
+	
+	
+	
 <div class="container">
   <header>
     <div class="primary_header">
@@ -24,6 +31,11 @@
       </ul>
     </nav>
   </header>
+	
+
+	
+	
+	
   <section>
     <h2 class="noDisplay">Main Content</h2>
     <article class="left_article">
@@ -37,62 +49,42 @@
       <li id="six" class"complete">Google Plus: @NoDucksAllowed</li>
 	   </ul>
     </article>
+	  
+	  	
+
+	  
+	  
+	  
+	  
+	  
+	  
     <aside class="right_article"><img src="images/phonecall.jpg" alt="Evil Clipart duck 24 - 300 X 250" width="430" height="310"/></aside>
   </section>
   <footer class="secondary_header footer">
-    <div class="copyright">&copy;2020- <strong>PLEASE SAVE ME FROM MY SUFFERING LLC</strong><strong></strong></div>
-  </footer>
-  <script>
-  $(function() {
-  var $list, $newItemForm, $newItemButton;
-  var item = '';                                 
-  $list = $('ul');                              
-  $newItemForm = $('#newItemForm');              
-  $newItemButton = $('#newItemButton');          
-  $('li').hide().each(function(index) {          
-    $(this).delay(450 * index).fadeIn(1600);     
-  });
-  function updateCount() {                       
-    var items = $('li[class!=complete]').length; 
-    $('#counter').text(items);                  
-  }
-  updateCount();                                
-  $newItemButton.show();                         
-  $newItemForm.hide();                           
-  $('#showForm').on('click', function() {        
-    $newItemButton.hide();                       
-    $newItemForm.show();                         
-  });
-  $newItemForm.on('submit', function(e) {       
-    e.preventDefault();                         
-    var text = $('input:text').val();           
-    $list.append('<li>' + text + '</li>');      
-    $('input:text').val('');                    
-    updateCount();                              
-  });
-  $list.on('click', 'li', function() {
-    var $this = $(this);               
-    var complete = $this.hasClass('complete');  
-    if (complete === true) {           
-      $this.animate({                  
-        opacity: 0.0,
-        paddingLeft: '+=180'
-      }, 500, 'swing', function() {   
-        $this.remove();                
-      });
-    } else {                           
-      item = $this.text();             
-      $this.remove();                  
-      $list                            
-        .append('<li class=\"complete\">' + item + '</li>')
-        .hide().fadeIn(300);         
-      updateCount();                   
-    }                                 
-  });                                  
-});
+	  
+	  
+    <div class="copyright"><center>
+<div onmousedown="mDown(this)" onmouseup="mUp(this)"
+style="background-color:#D94A38;width:90px;height:9
+0px;padding:40px;">
+PLEASE SAVE ME FROM MY SUFFERING LLC</div>
+
+<script>
+function mDown(obj) {
+  obj.style.backgroundColor = "#1ec5e5";
+  obj.innerHTML = "Release Me";
+}
+
+function mUp(obj) {
+  obj.style.backgroundColor="#D94A38";
+  obj.innerHTML="Ducks are not cool";
+}
 </script>
-  <script src="js/jquery-1.11.0.js"></script>
-  <script src="js/effects.js"></script>
+</center>&copy;2020- 
+		
+  </footer>
+	
+
 </div>
 </body>
 </html>
