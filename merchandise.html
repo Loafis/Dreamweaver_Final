@@ -14,7 +14,11 @@
     <div class="third"><img src="images/axe plushie.jpeg" width="261" height="261" alt=""/></div>
     <div class="two-thirds">
       <table ng-controller="BasketCtrl">
+<<<<<<< HEAD
         <tr><td>Item:</td><td><a href="description or something like that.html">Axe Plushie</a></td></tr>
+=======
+        <tr><td>Item:</td><td>{{ description }}</td></tr>
+>>>>>>> afc5d355cb62aa1b29138c11f0e4282ae487061e
         <tr><td>Cost:</td><td>${{ cost }}</td></tr>
         <tr><td>Qty:</td><td><input type="number" ng-model="qty"></td></tr>
         <tr><td>Subtotal:</td><td>{{qty * cost | currency}}</td></tr>
