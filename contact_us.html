@@ -60,6 +60,35 @@
 	  
     <aside class="right_article"><img src="images/phonecall.jpg" alt="Evil Clipart duck 24 - 300 X 250" width="430" height="310"/></aside>
   </section>
+	
+	 <div class="container login">
+      <form id="how-heard" action="/heard" method="post">
+        <div class="one-third column"> </div>
+        <div class="two-thirds column" id="main">
+          <fieldset>
+            <legend>How would you like us to contact you?</legend>
+
+            <input type="radio" name="heard" value="search" id="search" />
+            <label for="search">Email</label><br>
+
+            <input type="radio" name="heard" value="print" id="print" />
+            <label for="print">Text Message</label><br>
+
+            <input type="radio" name="heard" value="other" id="other" />
+            <label for="other">Phonecall</label><br>
+            <input type="text" name="other-input" id="other-text" />
+  
+            <input id="submit" type="submit" value="submit" />
+          </fieldset>
+        </div><!-- .two-thirds -->
+      </form>
+    </div><!-- .container -->
+    <script src="js/utilities.js"></script>
+    <script src="js/show-option.js"></script>
+	
+	
+	
+	
   <footer class="secondary_header footer">
 	  
 	  
